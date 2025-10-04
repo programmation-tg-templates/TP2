@@ -1,6 +1,6 @@
 # Conditions - TP2
 
-Déterminer si une lettre est en majuscule ou en minuscule
+Déterminer si une lettre est en majuscule ou en minuscule.
 
 On souhaite écrire un programme en TypeScript qui indique si une lettre est une majuscule ou une minuscule.
 
