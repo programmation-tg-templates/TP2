@@ -1,15 +1,47 @@
-import {verifierLettre} from '../index';
+import { verifierLettre } from "../index";
 
-describe('Vérifier la casse d\'une lette', () => {
-    test('Tester que ce n\'est pas un caractère', () => {
-        expect(verifierLettre('AA')).toEqual('invalide');
-    });
+describe("Vérifier la casse d'une lette", () => {
+  test("Un texte n'est pas un caractère valide", () => {
+    expect(verifierLettre("AA")).toEqual("invalide");
+  });
 
-    test('Tester une lettre majuscule', () => {
-        expect(verifierLettre('A')).toEqual('majuscule');
-    });
+  test("Une chaine vide n'est pas un caractère valide", () => {
+    expect(verifierLettre("")).toEqual("invalide");
+  });
 
-    test('Tester une lettre minuscule', () => {
-        expect(verifierLettre('a')).toEqual('minuscule');
-    });
+  test("Un nombre n'est pas un caractère valide", () => {
+    expect(verifierLettre("3")).toEqual("invalide");
+  });
+
+  test("A est une majuscule", () => {
+    expect(verifierLettre("A")).toEqual("majuscule");
+  });
+
+  test("a est une minuscule", () => {
+    expect(verifierLettre("a")).toEqual("minuscule");
+  });
+
+  test("L est une majuscule", () => {
+    expect(verifierLettre("L")).toEqual("majuscule");
+  });
+
+  test("l est une minuscule", () => {
+    expect(verifierLettre("l")).toEqual("minuscule");
+  });
+
+  test("L est une majuscule", () => {
+    expect(verifierLettre("L")).toEqual("majuscule");
+  });
+
+  test("l est une minuscule", () => {
+    expect(verifierLettre("l")).toEqual("minuscule");
+  });
+
+  test("Z est une majuscule", () => {
+    expect(verifierLettre("Z")).toEqual("majuscule");
+  });
+
+  test("z est une minuscule", () => {
+    expect(verifierLettre("z")).toEqual("minuscule");
+  });
 });
